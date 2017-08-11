@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>打气球</title>
+	<style>
+		html{height: 100%;}
+		body{height: 100%;overflow: hidden;margin:0;}
+		#player{
+			width: 56px;
+			height: 50px;
+			background:url('img/17.gif');
+			opacity:0.5;
+			margin:100px auto 0;
+			cursor:pointer;
+			position: fixed;
+			top:-70px;
+			right:100px;
+			z-index: 5;
+		}
+		.blow{animation: blow .5s}
+		@keyframes blow{
+			0%{transform: scale(2);opacity: 1}
+			50%{transform: scale(5);opacity: .5}
+			60%{transform: scale(8);opacity: .1}
+			100%{transform: scale(8);opacity: 0}
+		}
+	</style>
+</head>
+<body>
+	<script src="qq.js"></script>
+	<script src="Cloud.js"></script>
+	<script src="gun.js"></script>
+	<script src="pointer.js"></script>
+	<script src="bg.js"></script>
+	<script src="audio.js"></script>
+	<script src="game.js"></script>
+
+	<script>
+
+		game.startGame();
+
+	</script>
+	<div id="player"></div>
+	<audio loop>
+		<source src="./audio/荒野大镖客.ogg" type="audio/ogg"></source>
+		<source src="./audio/荒野大镖客.mp3" type="audio/mpeg"></source>
+		<embed height="50" width="100" src="./audio/荒野大镖客.mp3">
+			您的浏览器不支持HTML5音频播放功能
+	</audio>
+</body>
+</html>
